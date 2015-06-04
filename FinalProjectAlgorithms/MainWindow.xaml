@@ -67,7 +67,7 @@
         <TextBox Height="36" HorizontalAlignment="Left" Margin="1047,654,0,0" Name="tbCost" VerticalAlignment="Top" Width="49" FontFamily="Baskerville Old Face" FontSize="20" MaxLength="5" />
         <TextBox Height="302" HorizontalAlignment="Left" Margin="26,93,0,0" Name="nodeList" VerticalAlignment="Top" Width="424" IsReadOnly="True" Background="DarkGray" BorderBrush="#FF202424" VerticalScrollBarVisibility="Visible" FontFamily="Baskerville Old Face" FontSize="20" />
 
-        <m:Map x:Name="myMap" CredentialsProvider="AjJTSCM6t3UwfdK1gxK1CyKgWmgtEbC3IQKbM875XgidWiDMnkMuQf6_Fufi7abH" Center="55.740,-100.125" ZoomLevel="4" Width="376.179" Height="342"  Margin="500,76,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Focusable="False">
+        <m:Map x:Name="myMap" CredentialsProvider="AjJTSCM6t3UwfdK1gxK1CyKgWmgtEbC3IQKbM875XgidWiDMnkMuQf6_Fufi7abH" Center="55.740,-100.125" ZoomLevel="2" Width="376.179" Height="342"  Margin="500,76,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Focusable="False">
            
         </m:Map>
         <Rectangle Height="363" HorizontalAlignment="Left" Margin="490,65,0,0" x:Name="rectangle1_Copy" Stroke="DimGray" VerticalAlignment="Top" Width="394" StrokeThickness="3" RadiusX="3" RadiusY="3" />

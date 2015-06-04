@@ -27,7 +27,7 @@ namespace FinalProjectClasses
         public int v;
         public int edge;
 
-        //overlading IComparable compareTo method
+        //overloading IComparable compareTo method
         public int CompareTo(Vertex comparePart) //sorting Vertex's by edge cost
         {
             // A null value means that this object is greater. 
@@ -169,7 +169,7 @@ namespace FinalProjectClasses
                 nodeSet.nodes.Add(toNode);//add the new node to Graph and increment the node counter
             }
 
-            if (!fromNodeExists && !toNodeExists) //case--> none of the nodes exist
+            else if (!fromNodeExists && !toNodeExists) //case--> none of the nodes exist
             {
                 //create new nodes
                 GraphNode fromNode = new GraphNode(from);
@@ -187,7 +187,7 @@ namespace FinalProjectClasses
             }
 
 
-            if (fromNodeExists && toNodeExists) //case--> both of the nodes exist
+            else if (fromNodeExists && toNodeExists) //case--> both of the nodes exist
             {
                 //find already existing first node and update its neighbour and cost lists
                 nodeSet.FindByValue(from).neighbours.nodes.Add(nodeSet.FindByValue(to));
@@ -198,7 +198,7 @@ namespace FinalProjectClasses
                 nodeSet.FindByValue(to).costs.Add(cost);
             }
 
-            if (!fromNodeExists && toNodeExists) //case--> both of the nodes exist
+            else if (!fromNodeExists && toNodeExists) //case --> the second node is already on the list but the first node is new
             {
                 GraphNode fromNode = new GraphNode(from);//create new node
                 fromNode.neighbours.nodes.Add(nodeSet.FindByValue(to)); //find that node and add it to the new node's neighbours
@@ -215,7 +215,7 @@ namespace FinalProjectClasses
 
         //check if the graph contains a city
         public bool Contains(string value)
-        {
+        {            
             return nodeSet.FindByValue(value) != null; //uses the 'find by value' method to search the graph
         }
 
@@ -383,7 +383,7 @@ namespace FinalProjectClasses
             try
             {
                 XDocument xmldoc = XDocument.Load(path); //load file from specified path
-                XElement XEvents = xmldoc.Element("Edges");
+               // XElement XEdges = xmldoc.Element("Edges");
 
                 foreach (XElement item in xmldoc.Root.Nodes()) //parses XElement into graphnode object
                 {
@@ -480,7 +480,7 @@ namespace FinalProjectClasses
                     }
                 }
             }
-            return false; //cycle no found
+            return false; //cycle not found
         } 
     }
 }
